@@ -51,7 +51,7 @@ angular.module('anupamaApp')
 
         console.log($scope.feedback);
 
-        if ($scope.feedback.agree && ($scope.feedback.mychannel == "")) {
+        if ($scope.feedback.agree && ($scope.feedback.mychannel === "")) {
             $scope.invalidChannelSelection = true;
             console.log('incorrect');
         } else {
@@ -86,14 +86,14 @@ angular.module('anupamaApp')
         $scope.commentForm.$setPristine();
 
         $scope.myComment = { rating: 5, comment: "", author: "", date: "" };
-    }
+    };
 }])
 
 // implement the IndexController and About Controller here
 .controller('IndexController', ['$scope', '$stateParams', 'menuFactory', 'corporateFactory', function($scope, $stateParams, menuFactory, corporateFactory) {
     var promotion = menuFactory.getPromotion(0);
     var featured = menuFactory.getDish(0);
-    var executive = corporateFactory.getLeader(3)
+    var executive = corporateFactory.getLeader(3);
 
     $scope.promotion = promotion;
     $scope.featured = featured;

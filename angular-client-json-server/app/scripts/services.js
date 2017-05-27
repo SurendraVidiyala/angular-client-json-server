@@ -193,7 +193,7 @@ angular.module('anupamaApp')
 
     this.getPromotion = function(index) {
         return promotions[index];
-    }
+    };
 
     // implement a function named getPromotion
     // that returns a selected promotion.
@@ -250,5 +250,3 @@ angular.module('anupamaApp')
 
     return corpfac;
 });
-
-;
